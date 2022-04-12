@@ -1,0 +1,34 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: '👷'
+    ignore:
+      # update puppeteer: RUMF-1157
+      - dependency-name: 'puppeteer'
+        update-types: ['version-update:semver-major']
+      # update node & express types: RUMF-1158
+      - dependency-name: '@types/node'
+      - dependency-name: '@types/express'
+      # update busboy: RUMF-1159
+      - dependency-name: 'connect-busboy'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/connect-busboy'
+      # update jasmine: RUMF-1161
+      - dependency-name: '*jasmine*'
+      - dependency-name: '*sinon*'
+      # update ajv: RUMF-1164
+      - dependency-name: 'ajv'
+        update-types: ['version-update:semver-major']
+      # update ansi-regex: RUMF-1165
+      - dependency-name: 'ansi-regex'
+      # update webpack: RUMF-1166
+      - dependency-name: '*webpack*'
+      # update node-fetch: RUMF-1167
+      - dependency-name: 'node-fetch'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '*'
+        update-types: ['version-update:semver-minor', 'version-update:semver-patch']
