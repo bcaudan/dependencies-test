@@ -1,0 +1,13 @@
+{
+  "name": "combined",
+  "version": "4.7.1",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/pako": "1.0.3",
+    "pako": "2.0.4",
+    "@types/sinon": "9.0.10",
+    "sinon": "9.2.4",
+    "ajv": "6.12.6"
+  }
+}
