@@ -1,6 +1,12 @@
 {
   "extends": [
-    "config:base"
+    ":dependencyDashboard",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    "group:monorepos",
+    "group:recommended",
+    "group:allNonMajor"
   ],
-  "prConcurrentLimit": 5
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2
 }
