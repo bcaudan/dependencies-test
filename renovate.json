@@ -1,0 +1,22 @@
+{
+  "extends": [
+    ":dependencyDashboard",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    "group:monorepos",
+    "group:recommended",
+    "group:allNonMajor"
+  ],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 1,
+  "packageRules": [
+    {
+      "matchPackageNames": ["puppeteer", "@types/node", "@types/express", "connect-busboy", "@types/connect-busboy", "ajv", "ansi-regex", "node-fetch"],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["jasmine", "sinon", "webpack"],
+      "enabled": false
+    }
+  ]
+}
